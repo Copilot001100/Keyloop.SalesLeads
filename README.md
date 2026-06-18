@@ -38,6 +38,7 @@ A clean .NET 10 Web API for managing sales leads and follow-up activities, built
 ## API Endpoints
 
 - `GET /api/leads` - List all leads
+- `POST /api/leads` - Add new lead
 - `GET /api/leads/{id}` - Get lead details + activities
 - `POST /api/leads/{id}/activities` - Log new activity
 - `GET /health` - Health check
@@ -45,9 +46,12 @@ A clean .NET 10 Web API for managing sales leads and follow-up activities, built
 ## Example POST Body
 ```json
 {
-  "type": "Call",
-  "notes": "Customer interested in test drive",
-  "performedBy": "Alice"
+   "name": "string",
+   "email": "user@example.com",
+   "phone": "string",
+   "vehicleInterest": "string",
+   "status": "string",
+   "source": "string"
 }
 ```
 
@@ -55,7 +59,11 @@ A clean .NET 10 Web API for managing sales leads and follow-up activities, built
 Basic tests can be added in `/tests` folder (xUnit recommended).
 
 ## AI Collaboration
-This solution was built in close collaboration with Grok (xAI). Grok helped generate models, controllers, seeding logic, and ensured clean architecture.
+This solution was built in close collaboration with Grok (xAI), Codex, Copilot.
+- Grok helped generate models, controllers, seeding logic, and ensured clean architecture.
+- Codex helped with fixes and updates.
+- Copilot helped generate sample data and testings. 
+
 
 ---
 
